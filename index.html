@@ -1007,12 +1007,736 @@ body.dark .backdrop-blur{background:var(--glass-dark);border-color:#2a3a47}
 }
 </style>
 
+
+<style id="final-responsive-fix">
+/* =========================================================
+   FINAL RESPONSIVE FIX
+   Keeps the existing design and removes horizontal overflow.
+   ========================================================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip !important;
+}
+
+body {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video,
+iframe,
+svg,
+canvas {
+  max-width: 100%;
+}
+
+.container,
+.container-fluid {
+  width: 100%;
+  max-width: 100%;
+}
+
+.row {
+  max-width: 100%;
+}
+
+[class*="col-"] {
+  min-width: 0;
+}
+
+/* ---------- Navbar ---------- */
+
+.navbar {
+  width: 100%;
+  max-width: 100vw;
+}
+
+.navbar .container {
+  min-width: 0;
+}
+
+.navbar-brand {
+  min-width: 0;
+  max-width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.navbar .navbar-toggler {
+  flex-shrink: 0;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.hero-content,
+.hero-grid {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr);
+}
+
+.hero-grid > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.hero h1,
+.hero h2,
+.hero h3,
+.hero p,
+.hero .type-line,
+.hero .typing {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.profile-box {
+  max-width: 100%;
+}
+
+.profile-photo {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-actions {
+  max-width: 100%;
+}
+
+.hero-actions .btn {
+  max-width: 100%;
+  white-space: normal;
+}
+
+.hero-meta {
+  max-width: 100%;
+}
+
+.hero-kpis,
+.quick-stats {
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero-kpi,
+.quick-stat {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Sections / Cards ---------- */
+
+.section-pad,
+.section-shell,
+.soft-card,
+.premium-card,
+.metric,
+.project-card,
+.counter-box,
+.contact-action,
+.personal-pro-card,
+.cta-banner,
+.executive-cta {
+  max-width: 100%;
+}
+
+.soft-card,
+.premium-card,
+.metric,
+.project-card,
+.counter-box,
+.contact-action,
+.personal-pro-card {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.section-shell {
+  overflow-x: clip;
+}
+
+.project-card h4,
+.project-card p,
+.personal-item .value,
+.contact-action .value {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* ---------- Personal details ---------- */
+
+.personal-item {
+  min-width: 0;
+}
+
+.personal-item .value {
+  max-width: 100%;
+  text-align: right;
+}
+
+/* ---------- Project filter ---------- */
+
+.filter-bar {
+  max-width: 100%;
+}
+
+.filter-btn {
+  max-width: 100%;
+  white-space: normal;
+}
+
+/* ---------- Compare bars ---------- */
+
+.compare-row {
+  min-width: 0;
+}
+
+.compare-label {
+  flex: 0 0 120px;
+  min-width: 0;
+}
+
+.compare-bar {
+  min-width: 0;
+}
+
+/* ---------- Tables ---------- */
+
+.table-responsive {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  min-width: 600px;
+}
+
+/* ---------- QR ---------- */
+
+.qr-card,
+.qr-frame {
+  max-width: 100%;
+}
+
+.qr-card img,
+.qr-frame img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  width: 100%;
+  max-width: 100%;
+}
+
+.footer-link {
+  white-space: nowrap;
+}
+
+/* ---------- Floating decorative elements ---------- */
+
+.float-orb,
+.hero::before,
+.hero::after,
+.section-shell::before {
+  pointer-events: none;
+}
+
+.float-orb {
+  max-width: 100vw;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+  .hero {
+    padding: 105px 0 70px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    text-align: center;
+  }
+
+  .hero-grid > div {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .profile-box {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-meta,
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 8vw, 3.6rem);
+  }
+
+  .quick-stats,
+  .hero-kpis {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .section-pad {
+    padding: 72px 0;
+  }
+
+  .personal-item {
+    min-height: 58px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+  html {
+    scroll-padding-top: 72px;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .hero {
+    padding: 94px 0 58px;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 165px;
+    height: 205px;
+    object-fit: cover;
+  }
+
+  .profile-box {
+    padding: 7px;
+    border-radius: 25px;
+  }
+
+  .profile-box::after {
+    inset: -9px;
+    border-radius: 31px;
+  }
+
+  .hero-badge {
+    right: -4px;
+    top: 6px;
+    font-size: .62rem;
+    padding: 7px 9px;
+  }
+
+  .online-pill {
+    left: 7px;
+    top: 7px;
+    font-size: .64rem;
+    padding: 6px 9px;
+  }
+
+  .verified {
+    right: -4px;
+    bottom: 9px;
+    font-size: .65rem;
+    padding: .4rem .58rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+    line-height: 1.05;
+  }
+
+  .hero .h3 {
+    font-size: 1.15rem;
+  }
+
+  .hero p.lead,
+  .hero-copy-animated {
+    font-size: .98rem !important;
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 10px !important;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    font-size: .8rem;
+  }
+
+  .quick-stats,
+  .hero-kpis {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .quick-stat,
+  .hero-kpi {
+    width: 100%;
+  }
+
+  .section-pad {
+    padding: 58px 0;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  .section-subtitle {
+    font-size: .95rem;
+  }
+
+  .personal-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .personal-item .value {
+    text-align: left;
+  }
+
+  .project-card {
+    min-height: auto;
+  }
+
+  .project-number {
+    font-size: 2rem;
+    right: 12px;
+  }
+
+  .compare-row {
+    flex-wrap: wrap;
+  }
+
+  .compare-label {
+    flex: 0 0 100%;
+    width: 100%;
+    font-size: .75rem;
+  }
+
+  .compare-bar {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .social-links {
+    justify-content: flex-start;
+  }
+
+  .print-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .print-sheet {
+    padding: 14px !important;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .hero {
+    padding-top: 88px;
+  }
+
+  .profile-photo {
+    width: 145px;
+    height: 185px;
+  }
+
+  .hero h1 {
+    font-size: 2.05rem;
+  }
+
+  .hero-label {
+    font-size: .62rem;
+    letter-spacing: .12em;
+  }
+
+  .eyebrow {
+    font-size: .72rem;
+    padding: .45rem .7rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    padding: .72rem .9rem;
+  }
+
+  .hero-meta {
+    font-size: .76rem;
+  }
+
+  .section-pad {
+    padding: 52px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .display-6 {
+    font-size: 1.9rem;
+  }
+
+  .soft-card,
+  .premium-card,
+  .metric,
+  .project-card {
+    border-radius: 17px;
+  }
+
+  .qr-card img,
+  .qr-frame img {
+    width: 130px !important;
+    height: 130px !important;
+  }
+
+  .executive-cta,
+  .cta-banner {
+    padding: 20px 16px;
+  }
+
+  .executive-cta .btn,
+  .cta-banner .btn {
+    width: 100%;
+  }
+
+  .offcanvas {
+    width: min(88vw, 360px) !important;
+  }
+
+  .floating-top {
+    right: 14px;
+    bottom: 14px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* =========================================================
+   LANDSCAPE MOBILE
+   ========================================================= */
+
+@media (orientation: landscape) and (max-width: 991.98px) {
+
+  .hero {
+    padding: 82px 0 45px;
+  }
+
+  .profile-photo {
+    width: 135px;
+    height: 170px;
+  }
+}
+
+/* =========================================================
+   PRINT / A4
+   ========================================================= */
+
+@media print {
+
+  html,
+  body {
+    overflow: visible !important;
+  }
+
+  .print-sheet {
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  .print-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .print-table {
+    width: 100% !important;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+
+
+<style id="print-personal-details-right">
+/* ===== PRINT: Personal Details shifted to the right ===== */
+@media print {
+  .personal-details-section {
+    width: 68% !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+
+  .personal-details-section h2 {
+    text-align: right !important;
+  }
+
+  .personal-details-section .print-grid {
+    grid-template-columns: 1fr !important;
+    justify-items: end !important;
+    gap: 5px !important;
+  }
+
+  .personal-details-section .print-grid > div {
+    width: 100% !important;
+    text-align: right !important;
+    padding-right: 2px !important;
+  }
+}
+
+/* Keep normal website view unchanged */
+@media screen and (max-width: 575.98px) {
+  .personal-details-section {
+    width: 100%;
+  }
+}
+</style>
+
+
+<style id="print-personal-details-left-of-qr">
+/* ===== PRINT: Personal Details placed to the LEFT of QR ===== */
+@media print {
+
+  #printResume .print-sheet {
+    position: relative !important;
+  }
+
+  /* QR stays at the top-right of the printed resume */
+  #printResume .print-header-flex .print-qr-box {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 105px !important;
+    flex: none !important;
+  }
+
+  /* Personal Details sits immediately to the LEFT of QR */
+  #printResume .personal-details-section {
+    position: absolute !important;
+    top: 0 !important;
+    right: 120px !important;
+    width: 255px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 5 !important;
+  }
+
+  #printResume .personal-details-section h2 {
+    text-align: right !important;
+    margin-bottom: 6px !important;
+  }
+
+  #printResume .personal-details-section .print-grid {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  #printResume .personal-details-section .print-grid > div {
+    width: 100% !important;
+    text-align: right !important;
+    margin: 2px 0 !important;
+    white-space: nowrap !important;
+  }
+
+  /* Reserve enough header space so content below does not collide */
+  #printResume .print-header {
+    min-height: 115px !important;
+  }
+}
+
+/* Normal website view remains unchanged */
+@media screen {
+  #printResume .personal-details-section {
+    position: static;
+  }
+}
+</style>
+
 </head>
 
 <!-- GitHub Pages: keep this file named index.html at repository root. -->
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100" tabindex="0">
 
-<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+<nav id="mainNav" class="navbar navbar-expand-md navbar-dark fixed-top">
   <div class="container"><div id="navProgress" class="nav-progress"></div>
     <a class="navbar-brand fw-bold" href="#home">
       <i class="bi bi-person-vcard-fill me-2"></i>Lavkush Kumar
@@ -1528,40 +2252,6 @@ body.dark .backdrop-blur{background:var(--glass-dark);border-color:#2a3a47}
     </div>
   </div>
 </section>
-
-
-<section class="section-pad pt-0">
-  <div class="container">
-    <div class="cta-banner reveal">
-      <div class="cta-content row align-items-center g-4">
-        <div class="col-lg-8">
-          <div class="section-kicker mb-2" style="color:#bfe4ff">Next Step</div>
-          <h3 class="display-6 fw-bold mb-2">Let’s build something useful.</h3>
-          <p class="mb-0 opacity-75">
-            Explore my digital profile, contact me directly or print the resume for professional use.
-          </p>
-        </div>
-        <div class="col-lg-4 text-lg-end">
-          <div class="d-flex flex-wrap justify-content-lg-end gap-2">
-            <a href="#contact" class="btn btn-light rounded-pill px-4"><i class="bi bi-envelope-fill me-2"></i>Contact</a>
-            <button id="ctaPrintHeroBtn" type="button" class="btn btn-outline-light rounded-pill px-4"><i class="bi bi-printer-fill me-2"></i>Print</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section-pad pt-0">
-<div class="container">
-<div class="executive-cta reveal">
-<div class="row align-items-center g-4">
-<div class="col-lg-8"><div class="small text-uppercase fw-bold" style="letter-spacing:.12em;color:#9fd8ff">Professional Profile</div><h3 class="display-6 fw-bold mt-2 mb-2">Ready to learn, build and contribute.</h3><p class="mb-0 opacity-75">Explore the profile, contact me directly or use the print button for a professional resume copy.</p></div>
-<div class="col-lg-4 text-lg-end"><button id="ctaPrintBtn" class="btn btn-light rounded-pill px-4" type="button"><i class="bi bi-printer-fill me-2"></i>Print Resume</button></div>
-</div></div>
-</div></section>
-
 <footer class="py-4 border-top" style="background:var(--surface)">
   <div class="container">
     <div class="row align-items-center g-3">
