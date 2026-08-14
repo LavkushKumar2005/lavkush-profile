@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Lavkush Kumar — BCA 2nd Year Digital Resume and Professional Profile">
+  <meta name="description" content="Lavkush Kumar — BCA 2nd Year Digital Resume and My Profile">
   <meta name="theme-color" content="#0b5ed7">
-  <title>Lavkush Kumar | Professional Digital Resume</title>
+  <title>Lavkush Kumar | Digital Resume</title>
 
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -1731,6 +1731,520 @@ footer {
 }
 </style>
 
+
+<style id="natural-resume-polish">
+.core-tech-chips {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+@media print {
+  .core-tech-chips { gap:5px; }
+}
+</style>
+
+
+<style id="final-clean-responsive">
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip !important;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+img, video, iframe, canvas, svg {
+  max-width: 100%;
+}
+.hero, .section-shell, footer {
+  max-width: 100%;
+  overflow-x: clip;
+}
+.hero-grid,
+.hero-content,
+.hero-grid > *,
+[class*="col-"] {
+  min-width: 0;
+}
+.hero h1, .hero p, .hero .type-line,
+.project-card h4, .project-card p,
+.personal-item .value, .contact-action .value {
+  overflow-wrap: anywhere;
+}
+.profile-photo {
+  max-width: 100%;
+  height: auto;
+}
+.table-responsive {
+  max-width: 100%;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+@media (max-width: 991.98px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .profile-box {
+    margin-inline: auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-actions .btn {
+    width: 100%;
+  }
+  .hero-meta {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-kpis, .quick-stats {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .hero h1 {
+    font-size: 2.05rem;
+  }
+  .profile-photo {
+    width: 145px;
+    height: 185px;
+  }
+}
+</style>
+
+
+<style id="final-print-personal-details">
+@media print {
+  #printResume .print-sheet {
+    position: relative !important;
+  }
+  #printResume .print-header-flex .print-qr-box {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 105px !important;
+    flex: none !important;
+  }
+  #printResume .personal-details-section {
+    position: absolute !important;
+    top: 0 !important;
+    right: 120px !important;
+    width: 255px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 5 !important;
+  }
+  #printResume .personal-details-section h2 {
+    text-align: right !important;
+    margin-bottom: 6px !important;
+  }
+  #printResume .personal-details-section .print-grid {
+    display: block !important;
+    width: 100% !important;
+  }
+  #printResume .personal-details-section .print-grid > div {
+    width: 100% !important;
+    text-align: right !important;
+    margin: 2px 0 !important;
+    white-space: nowrap !important;
+  }
+  #printResume .print-header {
+    min-height: 115px !important;
+  }
+}
+</style>
+
+
+<style id="final-professional-print-layout">
+@media print {
+  @page { size: A4; margin: 9mm; }
+
+  #printResume {
+    display: block !important;
+  }
+
+  #printResume .container {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  #printResume .print-sheet-pro {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+    color: #182532 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+  }
+
+  .print-header-pro {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 8px !important;
+    border-bottom: 2px solid #0b5ed7 !important;
+  }
+
+  .print-header-main { flex: 1 1 auto !important; min-width: 0 !important; }
+
+  .print-kicker {
+    color: #0b5ed7 !important;
+    font-size: 7px !important;
+    font-weight: 800 !important;
+    letter-spacing: .18em !important;
+    margin-bottom: 3px !important;
+  }
+
+  .print-header-pro h1 {
+    color: #0b5ed7 !important;
+    font-size: 23px !important;
+    line-height: 1 !important;
+    margin: 0 0 4px !important;
+  }
+
+  .print-role {
+    color: #3d4d5c !important;
+    font-size: 9px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .print-contact {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    color: #536271 !important;
+    font-size: 7.5px !important;
+  }
+
+  .print-contact span:not(:last-child)::after {
+    content: "  |  " !important;
+    color: #a0aab3 !important;
+    white-space: pre !important;
+  }
+
+  .print-personal-qr {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    flex: 0 0 auto !important;
+  }
+
+  .print-personal-box {
+    width: 145px !important;
+    text-align: right !important;
+    font-size: 7px !important;
+    line-height: 1.45 !important;
+  }
+
+  .print-personal-title {
+    color: #0b5ed7 !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    margin-bottom: 3px !important;
+  }
+
+  .print-qr-box-pro {
+    width: 73px !important;
+    height: 82px !important;
+    padding: 4px !important;
+    border: 1px solid #c7d4e1 !important;
+    border-radius: 8px !important;
+    background: #fff !important;
+    text-align: center !important;
+  }
+
+  .print-qr-box-pro img {
+    width: 62px !important;
+    height: 62px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto 2px !important;
+  }
+
+  .print-qr-box-pro div {
+    color: #0b5ed7 !important;
+    font-size: 5.5px !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+  }
+
+  .print-section-pro {
+    margin: 0 0 7px !important;
+    page-break-inside: avoid !important;
+  }
+
+  .print-section-pro h2 {
+    color: #0b5ed7 !important;
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+    margin: 0 0 4px !important;
+    padding-bottom: 3px !important;
+    border-bottom: 1px solid #d8e2ec !important;
+  }
+
+  .print-section-pro p {
+    color: #263544 !important;
+    font-size: 7.2px !important;
+    line-height: 1.42 !important;
+    margin: 0 !important;
+  }
+
+  .print-tech-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    column-gap: 24px !important;
+    row-gap: 3px !important;
+    font-size: 7.2px !important;
+    line-height: 1.4 !important;
+  }
+
+  .print-project {
+    display: grid !important;
+    grid-template-columns: 145px 1fr !important;
+    gap: 7px !important;
+    margin-bottom: 4px !important;
+    font-size: 7.2px !important;
+    line-height: 1.4 !important;
+  }
+
+  .print-project-title {
+    font-weight: 700 !important;
+    color: #182532 !important;
+  }
+
+  .print-table-pro {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-size: 6.8px !important;
+    margin: 0 !important;
+  }
+
+  .print-table-pro th,
+  .print-table-pro td {
+    border: 1px solid #cbd7e3 !important;
+    padding: 4px 5px !important;
+    text-align: left !important;
+    line-height: 1.25 !important;
+  }
+
+  .print-table-pro th {
+    background: #eaf2ff !important;
+    color: #0b5ed7 !important;
+    font-weight: 700 !important;
+  }
+
+  .print-bottom-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 18px !important;
+  }
+
+  .print-footer-pro {
+    margin-top: 6px !important;
+    padding-top: 5px !important;
+    border-top: 1px solid #d8e0e7 !important;
+    color: #7b8792 !important;
+    text-align: center !important;
+    font-size: 6px !important;
+  }
+}
+</style>
+
+
+<style id="updated-print-footer">
+@media print {
+  .print-footer-pro {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+    margin-top: 7px !important;
+    padding-top: 6px !important;
+    border-top: 1px solid #d5dde6 !important;
+    color: #687582 !important;
+    font-size: 6.2px !important;
+    line-height: 1.2 !important;
+    letter-spacing: .01em !important;
+  }
+
+  .print-footer-pro::before {
+    content: "LAVKUSH KUMAR";
+    color: #0b5ed7 !important;
+    font-weight: 700 !important;
+  }
+
+  .print-footer-pro::after {
+    content: "Professional Resume";
+    color: #687582 !important;
+  }
+
+  .print-footer-pro {
+    font-size: 0 !important;
+  }
+
+  .print-footer-pro::before,
+  .print-footer-pro::after {
+    font-size: 6.2px !important;
+  }
+}
+</style>
+
+
+<style id="website-footer-pro">
+.website-footer {
+  position: relative;
+  margin-top: 30px;
+  padding: 55px 0 0;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.website-footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #0b5ed7, transparent);
+}
+
+.website-footer .footer-brand {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.footer-about {
+  max-width: 470px;
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.65;
+}
+
+.footer-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.footer-tech span {
+  padding: 5px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: .72rem;
+  background: color-mix(in srgb, var(--surface) 90%, #0b5ed7 10%);
+}
+
+.footer-title {
+  color: var(--text);
+  font-size: .86rem;
+  font-weight: 800;
+  margin-bottom: 13px;
+}
+
+.website-footer .footer-link {
+  display: block;
+  width: fit-content;
+  margin: 0 0 8px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: .84rem;
+  transition: color .2s ease, transform .2s ease;
+}
+
+.website-footer .footer-link:hover {
+  color: #0b5ed7;
+  transform: translateX(3px);
+}
+
+.footer-contact {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-bottom: 10px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: .79rem;
+  line-height: 1.45;
+}
+
+.footer-contact i {
+  color: #0b5ed7;
+  margin-top: 2px;
+  flex: 0 0 auto;
+}
+
+.footer-contact:hover {
+  color: #0b5ed7;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 38px;
+  padding: 15px 0 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .72rem;
+}
+
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.footer-bottom-links a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer-bottom-links a:hover {
+  color: #0b5ed7;
+}
+
+@media (max-width: 767.98px) {
+  .website-footer {
+    padding-top: 40px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-bottom-links {
+    flex-wrap: wrap;
+  }
+}
+
+@media print {
+  .website-footer {
+    display: none !important;
+  }
+}
+</style>
+
 </head>
 
 <!-- GitHub Pages: keep this file named index.html at repository root. -->
@@ -1794,7 +2308,7 @@ footer {
       </div>
       <div>
         <div class="eyebrow mb-3"><i class="bi bi-mortarboard-fill"></i>BCA 2nd Year — Currently Pursuing</div>
-        <div class="hero-label">Digital Resume • Professional Profile</div>
+        <div class="hero-label">Digital Resume • My Profile</div>
         <h1 class="display-3 fw-bold mb-2 hero-title-animated">LAVKUSH <span class="hero-title-accent">KUMAR</span></h1>
         <div class="h3 fw-normal type-line mb-3"><span class="typing" id="typing">Web Developer</span></div>
         <p class="lead mb-4 hero-copy-animated" style="max-width:700px;color:rgba(255,255,255,.84)">
@@ -1815,7 +2329,7 @@ footer {
   <div class="hero-kpi"><div class="kpi-number">BCA 2nd</div><div class="kpi-label">Current Year</div></div>
   <div class="hero-kpi"><div class="kpi-number">3+</div><div class="kpi-label">Projects</div></div>
   <div class="hero-kpi"><div class="kpi-number">QR</div><div class="kpi-label">Digital Profile</div></div>
-</div><div class="signature-line"><span></span>Professional Digital Resume<span></span></div>
+</div><div class="signature-line"><span></span>Digital Resume<span></span></div>
       <div class="quick-stats">
           <div class="quick-stat"><strong>BCA 2nd Year</strong><span>Currently Pursuing</span></div>
           <div class="quick-stat"><strong>3+</strong><span>Featured Projects</span></div>
@@ -1879,9 +2393,10 @@ footer {
           <h2 class="section-title display-6 mb-3">Professional Summary</h2>
           <div class="soft-card reveal-stagger feature-card p-4 p-lg-5">
             <p class="fs-5 lh-lg mb-3">
-              BCA 2nd-year student and aspiring Web Developer with practical experience in
-              <strong>C, HTML5, CSS3, Bootstrap and MySQL</strong>. Interested in building
-              responsive web applications and continuously improving software development skills.
+              I am a BCA 2nd-year student learning programming and web development.
+              I have worked with <strong>C, HTML5, CSS3, Bootstrap and MySQL</strong> in
+              college and personal projects. I enjoy building simple, responsive websites
+              and improving my skills by working on practical projects.
             </p>
             <div class="skill-badge-row">
               <span class="mini-chip"><i class="bi bi-code-slash"></i>C Programming</span>
@@ -1914,29 +2429,29 @@ footer {
 <section class="pb-5">
 <div class="container">
 <div class="text-center mb-4 reveal">
-<div class="section-kicker mb-2">Professional Snapshot</div>
+<div class="section-kicker mb-2">About My Work</div>
 <h2 class="section-title h2">Core Strengths</h2>
 </div>
 <div class="row g-4">
-<div class="col-md-6 col-xl-3"><div class="premium-card reveal-stagger reveal h-100"><div class="premium-number">01</div><h5 class="fw-bold mt-3">Problem Solving</h5><p class="small text-secondary mb-0">Programming fundamentals and practical problem solving.</p></div></div>
-<div class="col-md-6 col-xl-3"><div class="premium-card reveal-stagger reveal h-100"><div class="premium-number">02</div><h5 class="fw-bold mt-3">Responsive UI</h5><p class="small text-secondary mb-0">Clean layouts for desktop, tablet and mobile devices.</p></div></div>
-<div class="col-md-6 col-xl-3"><div class="premium-card reveal-stagger reveal h-100"><div class="premium-number">03</div><h5 class="fw-bold mt-3">Database Basics</h5><p class="small text-secondary mb-0">MySQL, SQL queries and data-driven application concepts.</p></div></div>
-<div class="col-md-6 col-xl-3"><div class="premium-card reveal-stagger reveal h-100"><div class="premium-number">04</div><h5 class="fw-bold mt-3">Continuous Learning</h5><p class="small text-secondary mb-0">Focused on learning tools and improving development skills.</p></div></div>
+<div class="col-md-6 col-xl-3"><div class="premium-card reveal-stagger reveal h-100"><div class="premium-number">01</div><h5 class="fw-bold mt-3">Problem Solving</h5><p class="small text-secondary mb-0">Comfortable with basic programming concepts and solving coding problems.</p></div></div>
+<div class="col-md-6 col-xl-3"><div class="premium-card reveal-stagger reveal h-100"><div class="premium-number">02</div><h5 class="fw-bold mt-3">Responsive UI</h5><p class="small text-secondary mb-0">I try to make pages work well on desktop, tablet and mobile.</p></div></div>
+<div class="col-md-6 col-xl-3"><div class="premium-card reveal-stagger reveal h-100"><div class="premium-number">03</div><h5 class="fw-bold mt-3">Database Basics</h5><p class="small text-secondary mb-0">Basic work with MySQL tables, queries and database-based applications.</p></div></div>
+<div class="col-md-6 col-xl-3"><div class="premium-card reveal-stagger reveal h-100"><div class="premium-number">04</div><h5 class="fw-bold mt-3">Continuous Learning</h5><p class="small text-secondary mb-0">Learning new tools by using them in small projects and practice work.</p></div></div>
 </div></div></section>
 
 <section id="skills" class="section-pad bg-body-tertiary">
   <div class="container">
     <div class="text-center mb-5 reveal">
-      <div class="section-kicker mb-2">Capabilities</div>
+      <div class="section-kicker mb-2">Skills</div>
       <h2 class="section-title display-6">Technical Skills</h2>
-      <p class="section-subtitle mx-auto">Focused on fundamentals, responsive UI and database-driven web development.</p>
+      <p class="section-subtitle mx-auto">Skills I have been learning and using in college and personal projects.</p>
     </div>
     <div class="row g-4">
       <div class="col-md-6">
         <div class="soft-card reveal-stagger skill-card p-4 h-100 reveal">
           <div class="d-flex align-items-center gap-3 mb-3">
             <div class="icon-box"><i class="bi bi-code-square"></i></div>
-            <div><h5 class="mb-1">C Programming</h5><small class="text-secondary">Programming & problem solving</small></div>
+            <div><h5 class="mb-1">C Programming</h5><small class="text-secondary">Programming basics & problem solving</small></div>
           </div>
           <div class="progress"><div class="progress-bar skill-fill progress-shimmer" data-value="78"></div></div>
         </div>
@@ -1945,7 +2460,7 @@ footer {
         <div class="soft-card reveal-stagger skill-card p-4 h-100 reveal">
           <div class="d-flex align-items-center gap-3 mb-3">
             <div class="icon-box"><i class="bi bi-window-stack"></i></div>
-            <div><h5 class="mb-1">HTML5 / CSS3 / Bootstrap</h5><small class="text-secondary">Responsive web design</small></div>
+            <div><h5 class="mb-1">HTML5 / CSS3 / Bootstrap</h5><small class="text-secondary">Responsive page design</small></div>
           </div>
           <div class="progress"><div class="progress-bar skill-fill progress-shimmer" data-value="86"></div></div>
         </div>
@@ -1954,7 +2469,7 @@ footer {
         <div class="soft-card reveal-stagger skill-card p-4 h-100 reveal">
           <div class="d-flex align-items-center gap-3 mb-3">
             <div class="icon-box"><i class="bi bi-database-check"></i></div>
-            <div><h5 class="mb-1">MySQL / SQL</h5><small class="text-secondary">Database fundamentals</small></div>
+            <div><h5 class="mb-1">MySQL / SQL</h5><small class="text-secondary">Tables, queries & basic database work</small></div>
           </div>
           <div class="progress"><div class="progress-bar skill-fill progress-shimmer" data-value="77"></div></div>
         </div>
@@ -1963,7 +2478,7 @@ footer {
         <div class="soft-card reveal-stagger skill-card p-4 h-100 reveal">
           <div class="d-flex align-items-center gap-3 mb-3">
             <div class="icon-box"><i class="bi bi-git"></i></div>
-            <div><h5 class="mb-1">Git / GitHub / VS Code</h5><small class="text-secondary">Development workflow</small></div>
+            <div><h5 class="mb-1">Git / GitHub / VS Code</h5><small class="text-secondary">Project files & version control</small></div>
           </div>
           <div class="progress"><div class="progress-bar skill-fill progress-shimmer" data-value="72"></div></div>
         </div>
@@ -1975,9 +2490,9 @@ footer {
 <section id="projects" class="section-pad">
   <div class="container">
     <div class="text-center mb-5 reveal">
-      <div class="section-kicker mb-2">Selected Work</div>
+      <div class="section-kicker mb-2">My Projects</div>
       <h2 class="section-title display-6">Projects</h2>
-      <p class="section-subtitle mx-auto">A selection of practical development work.</p>
+      <p class="section-subtitle mx-auto">Some of the projects I have worked on.</p>
     </div>
     
 <div id="projectFilters" class="filter-bar reveal">
@@ -2047,12 +2562,12 @@ footer {
   <div class="container">
     <div class="section-intro reveal">
       <div class="section-kicker mb-2">At a Glance</div>
-      <h2 class="section-title display-6">Professional Snapshot</h2>
-      <p class="section-subtitle mx-auto">A quick visual summary of the profile.</p>
+      <h2 class="section-title display-6">About My Work</h2>
+      <p class="section-subtitle mx-auto">A quick look at my current skills and work.</p>
     </div>
     <div class="row g-4">
       <div class="col-md-4"><div class="counter-box reveal magic-card"><strong class="counter" data-target="3">0</strong><div class="small text-secondary mt-2">Featured Projects</div></div></div>
-      <div class="col-md-4"><div class="counter-box reveal magic-card"><strong class="counter" data-target="4">0</strong><div class="small text-secondary mt-2">Core Technology Areas</div></div></div>
+      <div class="col-md-4"><div class="counter-box reveal magic-card"><strong class="counter" data-target="4">0</strong><div class="small text-secondary mt-2">Technical Skills</div></div></div>
       <div class="col-md-4"><div class="counter-box reveal magic-card"><strong class="counter" data-target="2">0</strong><div class="small text-secondary mt-2">Languages</div></div></div>
     </div>
   </div>
@@ -2063,7 +2578,7 @@ footer {
     <div class="row g-4 align-items-start">
       <div class="col-lg-8">
         <div class="reveal">
-          <div class="section-kicker mb-2">Academic Background</div>
+          <div class="section-kicker mb-2">Education</div>
           <h2 class="section-title display-6 mb-4">Education</h2>
         </div>
         <div class="soft-card reveal-stagger p-3 p-md-4 reveal">
@@ -2146,12 +2661,25 @@ footer {
       <div class="row align-items-center g-4">
         <div class="col-lg-8">
           <div class="section-kicker mb-2">Career Objective</div>
-          <h3 class="fw-bold">Ready to learn, build and contribute.</h3>
-          <p class="text-secondary mb-0">
-            To begin a software development career where I can apply my programming and web-development skills
-            while continuously learning and contributing to real-world projects.
+          <h3 class="fw-bold">Looking for an opportunity to learn and grow.</h3>
+          <p class="text-secondary mb-3">
+            I want to start my career in software development where I can use what I have
+            learned in programming and web development. I am looking for practical work
+            where I can learn from real projects and improve my skills.
           </p>
+
+          <div class="small fw-bold mb-2">Core Technology Areas</div>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="mini-chip">C Programming</span>
+            <span class="mini-chip">HTML5</span>
+            <span class="mini-chip">CSS3</span>
+            <span class="mini-chip">Bootstrap</span>
+            <span class="mini-chip">MySQL / SQL</span>
+            <span class="mini-chip">Git / GitHub</span>
+            <span class="mini-chip">Visual Studio Code</span>
+          </div>
         </div>
+
         <div class="col-lg-4 text-lg-end">
           <div class="d-flex flex-wrap justify-content-lg-end gap-2">
             <a href="mailto:lavkushkumar14383@gmail.com" class="btn btn-primary btn-lg rounded-pill px-4">
@@ -2171,35 +2699,47 @@ footer {
 <!-- PRINTABLE RESUME -->
 <section id="printResume" class="print-only-resume">
   <div class="container py-4">
-    <div class="print-sheet">
-      <div class="print-header print-header-flex">
-        <div>
-          <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6c7883;font-weight:800;margin-bottom:5px;">Professional Resume</div>
+    <div class="print-sheet print-sheet-pro">
+
+      <div class="print-header-pro">
+        <div class="print-header-main">
+          <div class="print-kicker">PROFESSIONAL RESUME</div>
           <h1>LAVKUSH KUMAR</h1>
-          <p>Web Developer | BCA 2nd Year — Currently Pursuing</p>
-          <p>+91 9984034425 &nbsp; | &nbsp; lavkushkumar14383@gmail.com &nbsp; | &nbsp; Fatehpur, Uttar Pradesh</p>
+          <div class="print-role">Web Developer | BCA 2nd Year — Currently Pursuing</div>
+          <div class="print-contact">
+            <span>+91 998043425</span>
+            <span>lavkushkumar14383@gmail.com</span>
+            <span>Fatehpur, Uttar Pradesh</span>
+          </div>
         </div>
 
-      <div class="print-qr-box">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeoAAAHqAQAAAADjFjCXAAAEJ0lEQVR4nO2dTW7jSAxGH0cCelkC5gA+inyDOVLQR8oNpKPkAAGkpQEJnEX9ujOYhaVB2uOPC0e266EigKgiP7Jkcw7Y/McRGoQLFy5cuHDhwoWfi1uyHuYBmM2M2czsuvbYFWC2Hljz0Ot5swt/UXx0d/clfWjXsAFhS04IYG/Lbnalc3d3v8cPzi78xfA+/V0HGN/BoN8Y33uAzg3AYe8dHAMw6LZzZhcuHIBx2c1/Dp0Du7n7hl0Bu649Pv3Hswt/Cbz/5b3Pl6032M3HZQfYe2br3Ag3Y3w/dXbhr4kTo7QU13XlBXzKMZxPdA6hDCnE9NT3Lvy7cNrcgM4Zl39/yUPldcIftrjD1rKYz5ebpetwM58vN3NWAHaDcF9Be+p7F/5dOGkT9Q3GpV36fAqeVrj0dqNuuOnqqe9d+Hfhxc06jwJd+mzDPTpc5z4BMdZrgkB5nfCHLTnSktKHFL5l58pvN9psYtFaJ/yQ5U2TnCCQ3axsuNHNprDBGK+01gk/ZK02EuO1LfofdXOdIG2449IOkdcJf8hiDmuj7+bzX58GYfGUxIYFIywA3cZ8xZx1vxvy1Pcu/LfA11KpWM18YjdgN3vzmwGdx2aA8aP/R/zg7MJfBk963TwsboTP3gGcFWxcdpo+gNF3c8KCzQNZ0nvqexf+XXij1zWJBEWqiynFktWUKbiyCeFneV3RS6JoF7wpvMaBjTtKrxN+Am52uRmsfdaG49VuZpekoQDg02rGPIBdz5td+KvhRSUuwm/Y4paaRbsulcAmIBfIpBILP2St1+Vttrpe6nkKKfSjKZDJ64Q/bNXrciBHu9bFCI/8WYn65HXCD1jeV6vrbam/ZCI3niTr7rxTXif8ML4bhJRSACVfABp3/Hm5Ffn4zNmFvxSeO51CbXcqJdiy4da4LvamBNVhhZ+C7+buN4sqybjscdUzG9K3ZkNS7uxNFTHhx6yqxE0iEWO4ugjmWC8pd0GndYQfspQW0BW9pHZ1bmS9BGrjZ66cyeuEP2p32nBOUNtA7q6rrma4ymGFP25NNjHmFoC4mxb5DvIKlwfL64QfsuRItW845H21dqtPVCHPm6MV8jrhj1n2OnIMF9ybbvXU2k7z2Ced1hF+6lqXU4qJ2niXKxelNlYxeZ3wx8zvLfcBkHtOSg4Rv3VXRUz4OXjzrE4Au9I5s/1IL+NHH4fEell92Mlv8c8Lfzr8yzOdpioQUwU6iO0mo3JY4cfx5ux/PeefVJLcwfmFUR1W+Nl45/a27LFR3adQarM5zHNXHVb4Ifv6rM7hs/f54ulkNusPhzUfXpyHz3Iq8YTZhb8mnr0uOLAC47JjhL131j/jKdg4YvwwnPWHG3Sbzv4LP2BVJaY5hROKaJKffVJ1PZ1MFH4QN/16nXDhwoULFy5c+P8C/xtuZmLaLEM2WAAAAABJRU5ErkJggg==" alt="QR code for Lavkush Kumar digital profile">
-        <div class="print-qr-label">Scan for Digital Profile</div>
+        <div class="print-personal-qr">
+          <div class="print-personal-box">
+            <div class="print-personal-title">Personal Details</div>
+            <div><strong>Father's Name:</strong> Budhai</div>
+            <div><strong>Mother's Name:</strong> Vimla Devi</div>
+            <div><strong>Date of Birth:</strong> 07/05/2005</div>
+          </div>
+
+          <div class="print-qr-box print-qr-box-pro">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeoAAAHqAQAAAADjFjCXAAAEJ0lEQVR4nO2dTW7jSAxGH0cCelkC5gA+inyDOVLQR8oNpKPkAAGkpQEJnEX9ujOYhaVB2uOPC0e266EigKgiP7Jkcw7Y/McRGoQLFy5cuHDhwoWfi1uyHuYBmM2M2czsuvbYFWC2Hljz0Ot5swt/UXx0d/clfWjXsAFhS04IYG/Lbnalc3d3v8cPzi78xfA+/V0HGN/BoN8Y33uAzg3AYe8dHAMw6LZzZhcuHIBx2c1/Dp0Du7n7hl0Bu649Pv3Hswt/Cbz/5b3Pl6032M3HZQfYe2br3Ag3Y3w/dXbhr4kTo7QU13XlBXzKMZxPdA6hDCnE9NT3Lvy7cNrcgM4Zl39/yUPldcIftrjD1rKYz5ebpetwM58vN3NWAHaDcF9Be+p7F/5dOGkT9Q3GpV36fAqeVrj0dqNuuOnqqe9d+Hfhxc06jwJd+mzDPTpc5z4BMdZrgkB5nfCHLTnSktKHFL5l58pvN9psYtFaJ/yQ5U2TnCCQ3axsuNHNprDBGK+01gk/ZK02EuO1LfofdXOdIG2449IOkdcJf8hiDmuj7+bzX58GYfGUxIYFIywA3cZ8xZx1vxvy1Pcu/LfA11KpWM18YjdgN3vzmwGdx2aA8aP/R/zg7MJfBk963TwsboTP3gGcFWxcdpo+gNF3c8KCzQNZ0nvqexf+XXij1zWJBEWqiynFktWUKbiyCeFneV3RS6JoF7wpvMaBjTtKrxN+Am52uRmsfdaG49VuZpekoQDg02rGPIBdz5td+KvhRSUuwm/Y4paaRbsulcAmIBfIpBILP2St1+Vttrpe6nkKKfSjKZDJ64Q/bNXrciBHu9bFCI/8WYn65HXCD1jeV6vrbam/ZCI3niTr7rxTXif8ML4bhJRSACVfABp3/Hm5Ffn4zNmFvxSeO51CbXcqJdiy4da4LvamBNVhhZ+C7+buN4sqybjscdUzG9K3ZkNS7uxNFTHhx6yqxE0iEWO4ugjmWC8pd0GndYQfspQW0BW9pHZ1bmS9BGrjZ66cyeuEP2p32nBOUNtA7q6rrma4ymGFP25NNjHmFoC4mxb5DvIKlwfL64QfsuRItW845H21dqtPVCHPm6MV8jrhj1n2OnIMF9ybbvXU2k7z2Ced1hF+6lqXU4qJ2niXKxelNlYxeZ3wx8zvLfcBkHtOSg4Rv3VXRUz4OXjzrE4Au9I5s/1IL+NHH4fEell92Mlv8c8Lfzr8yzOdpioQUwU6iO0mo3JY4cfx5ux/PeefVJLcwfmFUR1W+Nl45/a27LFR3adQarM5zHNXHVb4Ifv6rM7hs/f54ulkNusPhzUfXpyHz3Iq8YTZhb8mnr0uOLAC47JjhL131j/jKdg4YvwwnPWHG3Sbzv4LP2BVJaY5hROKaJKffVJ1PZ1MFH4QN/16nXDhwoULFy5c+P8C/xtuZmLaLEM2WAAAAABJRU5ErkJggg==" alt="QR code for Lavkush Kumar digital profile">
+            <div>Scan for Digital<br>Profile</div>
+          </div>
+        </div>
       </div>
 
-  </div>
-</div>
-
-      <div class="print-section">
+      <div class="print-section-pro">
         <h2>Professional Summary</h2>
         <p>
-          BCA 2nd-year student and aspiring Web Developer with practical experience in C,
-          HTML5, CSS3, Bootstrap and MySQL. Interested in building responsive web applications
-          and continuously improving software development skills.
+          BCA 2nd-year student learning programming and web development. I have worked with
+          C, HTML5, CSS3, Bootstrap and MySQL in college and personal projects. I am interested
+          in practical software work and improving my skills through real projects.
         </p>
       </div>
 
-      <div class="print-section">
-        <h2>Technical Skills</h2>
-        <div class="print-grid">
+      <div class="print-section-pro">
+        <h2>Core Technology Areas</h2>
+        <div class="print-tech-grid">
           <div><strong>Programming:</strong> C</div>
           <div><strong>Web:</strong> HTML5, CSS3, Bootstrap, Responsive Web Design</div>
           <div><strong>Database:</strong> MySQL, SQL</div>
@@ -2207,18 +2747,35 @@ footer {
         </div>
       </div>
 
-      <div class="print-section">
+      <div class="print-section-pro">
         <h2>Projects</h2>
-        <p><strong>Student Management System:</strong> Database-driven application with student records, CRUD operations and an admin dashboard using Bootstrap and MySQL.</p>
-        <p><strong>Authentication & OTP System:</strong> Registration/login workflows, OTP generation and verification, session management and email authentication.</p>
-        <p><strong>Responsive Web Applications:</strong> Responsive pages using HTML5, CSS3 and Bootstrap with database integration.</p>
+
+        <div class="print-project">
+          <div class="print-project-title">Student Management System</div>
+          <div>Database-driven application with student records, CRUD operations and an admin dashboard using Bootstrap and MySQL.</div>
+        </div>
+
+        <div class="print-project">
+          <div class="print-project-title">Authentication &amp; OTP System</div>
+          <div>Registration/login workflows, OTP generation and verification, session management and email authentication.</div>
+        </div>
+
+        <div class="print-project">
+          <div class="print-project-title">Responsive Web Applications</div>
+          <div>Responsive pages using HTML5, CSS3 and Bootstrap with database integration.</div>
+        </div>
       </div>
 
-      <div class="print-section">
+      <div class="print-section-pro">
         <h2>Education</h2>
-        <table class="print-table">
+        <table class="print-table print-table-pro">
           <thead>
-            <tr><th>Qualification</th><th>Status / Year</th><th>Board / Institute</th><th>Result</th></tr>
+            <tr>
+              <th>Qualification</th>
+              <th>Status / Year</th>
+              <th>Board / Institute</th>
+              <th>Result</th>
+            </tr>
           </thead>
           <tbody>
             <tr><td>BCA</td><td>2nd Year</td><td>Currently Pursuing</td><td>—</td></tr>
@@ -2229,44 +2786,109 @@ footer {
         </table>
       </div>
 
-      
-      <div class="print-section personal-details-section">
-        <h2>Personal Details</h2>
-        <div class="print-grid">
-          <div><strong>Father's Name:</strong> Budhai</div>
-          <div><strong>Mother's Name:</strong> Vimla Devi</div>
-          <div><strong>Date of Birth:</strong> 07/05/2005</div>
+      <div class="print-bottom-grid">
+        <div class="print-section-pro">
+          <h2>Career Objective</h2>
+          <p>
+            I want to start my career in software development where I can use what I have learned
+            in programming and web development, work on practical projects and continue improving
+            my skills.
+          </p>
+        </div>
+
+        <div class="print-section-pro">
+          <h2>Additional Information</h2>
+          <p><strong>Languages:</strong> Hindi, English</p>
+          <p><strong>Address:</strong> Ketmai, Karikan Dhata, Fatehpur, Uttar Pradesh — 212641</p>
         </div>
       </div>
 
-<div class="print-section">
-        <h2>Additional Information</h2>
-        <p><strong>Languages:</strong> Hindi, English</p>
-        <p><strong>Career Objective:</strong> To begin a software development career where I can apply my programming and web-development skills while continuously learning and contributing to real-world projects.</p>
-        <p><strong>Address:</strong> Ketmai, Karikan Dhata, Fatehpur, Uttar Pradesh – 212641</p>
+      <div class="print-footer-pro">
+        Lavkush Kumar • Web Developer • Digital Profile via QR
       </div>
 
-      <div class="print-footer">
-        Digital Resume • Lavkush Kumar
-      </div>
     </div>
   </div>
 </section>
-<footer class="py-4 border-top" style="background:var(--surface)">
+<footer class="website-footer">
   <div class="container">
-    <div class="row align-items-center g-3">
-      <div class="col-lg-7">
+    <div class="row g-4">
+
+      <!-- Brand -->
+      <div class="col-lg-5 col-md-6">
         <div class="footer-brand">Lavkush Kumar</div>
-        <div class="small text-secondary">BCA 2nd Year — Currently Pursuing • Digital Resume</div>
+        <p class="footer-about">
+          BCA 2nd-year student learning programming and web development.
+          I build simple and responsive web projects while improving my skills.
+        </p>
+
+        <div class="footer-tech">
+          <span>C</span>
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>Bootstrap</span>
+          <span>MySQL</span>
+        </div>
       </div>
-      <div class="col-lg-5 text-lg-end">
-        <a class="footer-link me-3" href="#home">Home</a>
-        <a class="footer-link me-3" href="#projects">Projects</a>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-6">
+        <h6 class="footer-title">Quick Links</h6>
+        <a class="footer-link" href="#home">Home</a>
+        <a class="footer-link" href="#about">About</a>
+        <a class="footer-link" href="#skills">Skills</a>
+        <a class="footer-link" href="#projects">Projects</a>
+        <a class="footer-link" href="#education">Education</a>
+      </div>
+
+      <!-- Sections -->
+      <div class="col-lg-2 col-md-6">
+        <h6 class="footer-title">Sections</h6>
         <a class="footer-link" href="#contact">Contact</a>
+        <a class="footer-link" href="#" onclick="window.print(); return false;">Print Resume</a>
+        <a class="footer-link" href="#projects">My Work</a>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-lg-3 col-md-6">
+        <h6 class="footer-title">Contact</h6>
+
+        <a class="footer-contact" href="mailto:lavkushkumar14383@gmail.com">
+          <i class="bi bi-envelope-fill"></i>
+          <span>lavkushkumar14383@gmail.com</span>
+        </a>
+
+        <div class="footer-contact">
+          <i class="bi bi-geo-alt-fill"></i>
+          <span>Fatehpur, Uttar Pradesh</span>
+        </div>
+
+        <a class="footer-contact" href="tel:+919980434425">
+          <i class="bi bi-telephone-fill"></i>
+          <span>+91 998043425</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        © <span id="footerYear"></span> Lavkush Kumar. All rights reserved.
+      </div>
+
+      <div class="footer-bottom-links">
+        <a href="#home">Home</a>
+        <span>•</span>
+        <a href="#contact">Contact</a>
+        <span>•</span>
+        <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">
+          Back to Top ↑
+        </a>
       </div>
     </div>
   </div>
 </footer>
+
 
 <button id="topBtn" class="btn btn-primary floating-top" type="button" aria-label="Back to top">
   <i class="bi bi-arrow-up"></i>
@@ -2528,7 +3150,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Share
   document.getElementById("shareBtn").addEventListener("click", async () => {
-    const data = { title:"Lavkush Kumar | Digital Resume", text:"Professional Digital Resume", url:window.location.href };
+    const data = { title:"Lavkush Kumar | Digital Resume", text:"Digital Resume", url:window.location.href };
     if (navigator.share) {
       try { await navigator.share(data); } catch (e) {}
     } else {
@@ -2567,5 +3189,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 </script>
+
+<script id="footer-year-script">
+document.addEventListener("DOMContentLoaded", function () {
+  const y = document.getElementById("footerYear");
+  if (y) y.textContent = new Date().getFullYear();
+});
+</script>
+
 </body>
 </html>
