@@ -2414,14 +2414,17 @@ class="col-lg-7">
    AOS INITIALIZATION
 ========================= */
    
-document.getElementById("contactForm").addEventListener("submit", async function(event) {
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
 
-    event.preventDefault();
+    e.preventDefault();
 
-    const form = event.target;
+    const form = this;
     const result = document.getElementById("result");
+    const button = form.querySelector("button[type='submit']");
 
     result.innerHTML = "Sending...";
+    button.disabled = true;
 
     const formData = new FormData(form);
 
@@ -2438,20 +2441,32 @@ document.getElementById("contactForm").addEventListener("submit", async function
         const data = await response.json();
 
         if (data.success) {
-            result.innerHTML = "✅ Message sent successfully!";
+
+            result.innerHTML =
+                "✅ Message sent successfully!";
+
             form.reset();
+
         } else {
-            result.innerHTML = "❌ Message send nahi hua.";
+
+            result.innerHTML =
+                "❌ " + (data.message || "Message send nahi hua.");
+
         }
 
     } catch (error) {
 
-        result.innerHTML = "❌ Something went wrong.";
+        result.innerHTML =
+            "❌ Network error. Please try again.";
+
+    } finally {
+
+        button.disabled = false;
 
     }
 
 });
-
+</script>
 function sendMessage(event){
 
     event.preventDefault();
