@@ -809,71 +809,340 @@ section{
    CONTACT
 ========================= */
 
-.contact{
-    background:#d3dae1;
+.contact {
+    background: #d3dae1;
 }
 
-.contact-box{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:40px;
+.contact-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 40px;
+
+    /* Box Effect */
+    transition: .4s ease;
 }
 
-.contact-info{
-    height:100%;
-}
-
-.contact-info h3{
-    font-size:30px;
-    font-weight:800;
-}
-
-.contact-info p{
-    color:var(--muted);
-    line-height:1.8;
-}
-
-.contact-item{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    margin:22px 0;
-}
-
-.contact-item i{
-    width:48px;
-    height:48px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:10px;
-    background:rgba(59,130,246,.1);
-    color:#60a5fa;
-    font-size:20px;
-}
-
-.contact-item span{
-    color:#247ae3;
-}
-
-.form-control{
-    background:#f9fafc!important;
-    border:1px solid var(--border)!important;
-    color:#fff!important;
-    padding:13px 15px;
-}
-
-.form-control:focus{
-    box-shadow:0 0 0 3px rgba(59,130,246,.1)!important;
-    border-color:#3b82f6!important;
-}
-
-.form-control::placeholder{
-    color:#64748b;
+.contact-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(37, 99, 235, .12);
 }
 
 
+/* =========================
+   CONTACT INFO
+========================= */
+
+.contact-info {
+    height: 100%;
+}
+
+.contact-info h3 {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.contact-info p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+
+/* =========================
+   CONTACT ITEMS
+========================= */
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 22px 0;
+
+    transition: .35s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(8px);
+}
+
+.contact-item i {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(59, 130, 246, .1);
+    color: #60a5fa;
+
+    font-size: 20px;
+
+    transition: .35s ease;
+}
+
+.contact-item:hover i {
+    transform: scale(1.1) rotate(5deg);
+
+    background: #2563eb;
+    color: #fff;
+
+    box-shadow: 0 8px 20px rgba(37, 99, 235, .25);
+}
+
+.contact-item span {
+    color: #247ae3;
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+.contact-form {
+    animation: contactFormShow .8s ease forwards;
+}
+
+
+/* =========================
+   INPUT GROUP
+========================= */
+
+.form-group {
+    margin-bottom: 18px;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    animation: formInputShow .7s ease forwards;
+}
+
+.form-group:nth-child(3) {
+    animation-delay: .1s;
+}
+
+.form-group:nth-child(4) {
+    animation-delay: .2s;
+}
+
+.form-group:nth-child(5) {
+    animation-delay: .3s;
+}
+
+
+/* =========================
+   INPUT / TEXTAREA
+========================= */
+
+.form-control {
+    background: #f9fafc !important;
+
+    border: 1px solid var(--border) !important;
+
+    color: #111827 !important;
+
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    transition: all .35s ease !important;
+}
+
+
+/* Hover */
+
+.form-control:hover {
+    border-color: #93c5fd !important;
+}
+
+
+/* Focus */
+
+.form-control:focus {
+    box-shadow:
+        0 0 0 3px rgba(59, 130, 246, .1) !important;
+
+    border-color: #3b82f6 !important;
+
+    transform: translateY(-3px);
+}
+
+
+/* Placeholder */
+
+.form-control::placeholder {
+    color: #64748b;
+
+    transition: .3s ease;
+}
+
+.form-control:focus::placeholder {
+    transform: translateX(6px);
+    opacity: .55;
+}
+
+
+/* =========================
+   SEND BUTTON
+========================= */
+
+.send-btn {
+    position: relative;
+
+    overflow: hidden;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 12px 24px;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    animation: buttonShow .7s ease .45s forwards;
+
+    transition: all .35s ease;
+}
+
+
+/* Button Hover */
+
+.send-btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(37, 99, 235, .25);
+}
+
+
+/* Button Click */
+
+.send-btn:active {
+    transform: scale(.96);
+}
+
+
+/* Button Icon */
+
+.send-btn i {
+    display: inline-block;
+
+    transition: .3s ease;
+}
+
+.send-btn:hover i {
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   BUTTON SHINE EFFECT
+========================= */
+
+.send-btn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, .25);
+
+    transform: skewX(-20deg);
+
+    transition: .6s ease;
+}
+
+.send-btn:hover::before {
+    left: 130%;
+}
+
+
+/* =========================
+   RESULT MESSAGE
+========================= */
+
+.form-result {
+    min-height: 25px;
+
+    margin-top: 15px;
+
+    font-weight: 600;
+
+    animation: resultShow .4s ease;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes contactFormShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes formInputShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes buttonShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes resultShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
 /* =========================
    FOOTER
 ========================= */
@@ -2109,7 +2378,7 @@ Web Developer
 <div
 class="col-lg-7">
 
-<form id="contactForm">
+<form id="contactForm" class="contact-form">
 
     <input type="hidden"
            name="access_key"
@@ -2119,29 +2388,38 @@ class="col-lg-7">
            name="subject"
            value="New Message From Lavkush Portfolio">
 
-    <input type="text"
-           name="name"
-           class="form-control"
-           placeholder="Your Name"
-           required>
+    <div class="form-group">
+        <input type="text"
+               name="name"
+               class="form-control animated-input"
+               placeholder="Your Name"
+               required>
+    </div>
 
-    <input type="email"
-           name="email"
-           class="form-control"
-           placeholder="Your Email"
-           required>
+    <div class="form-group">
+        <input type="email"
+               name="email"
+               class="form-control animated-input"
+               placeholder="Your Email"
+               required>
+    </div>
 
-    <textarea name="message"
-              class="form-control"
-              rows="5"
-              placeholder="Your Message"
-              required></textarea>
+    <div class="form-group">
+        <textarea name="message"
+                  class="form-control animated-input"
+                  rows="5"
+                  placeholder="Your Message"
+                  required></textarea>
+    </div>
 
-    <button type="submit" class="btn btn-primary">
+    <button type="submit"
+            id="sendBtn"
+            class="btn btn-primary send-btn">
+        <i class="bi bi-send"></i>
         Send Message
     </button>
 
-    <p id="result"></p>
+    <p id="result" class="form-result"></p>
 
 </form>
 </div>
