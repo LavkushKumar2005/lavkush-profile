@@ -803,35 +803,78 @@ section{
     color:red;
     margin:8px 0 0;
 }
-
-
-/* =========================
-   CONTACT
-========================= */
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
 
 .contact {
     background: #d3dae1;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Soft Background Glow */
+
+.contact::before,
+.contact::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: .18;
+    pointer-events: none;
+}
+
+.contact::before {
+    top: -100px;
+    left: -80px;
+    background: #3b82f6;
+}
+
+.contact::after {
+    right: -100px;
+    bottom: -120px;
+    background: #8b5cf6;
+}
+
+
+/* =========================================================
+   CONTACT BOX
+========================================================= */
+
 .contact-box {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 18px;
+    position: relative;
+    z-index: 1;
+
+    background: rgba(255, 255, 255, .88);
+    border: 1px solid rgba(255, 255, 255, .7);
+    border-radius: 22px;
+
     padding: 40px;
 
-    /* Box Effect */
-    transition: .4s ease;
+    box-shadow:
+        0 15px 45px rgba(15, 23, 42, .08);
+
+    backdrop-filter: blur(12px);
+
+    transition:
+        transform .45s cubic-bezier(.2,.8,.2,1),
+        box-shadow .45s ease;
 }
 
 .contact-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(37, 99, 235, .12);
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 25px 65px rgba(37, 99, 235, .14);
 }
 
 
-/* =========================
+/* =========================================================
    CONTACT INFO
-========================= */
+========================================================= */
 
 .contact-info {
     height: 100%;
@@ -840,6 +883,11 @@ section{
 .contact-info h3 {
     font-size: 30px;
     font-weight: 800;
+    letter-spacing: -.5px;
+
+    color: #111827;
+
+    margin-bottom: 15px;
 }
 
 .contact-info p {
@@ -848,17 +896,19 @@ section{
 }
 
 
-/* =========================
+/* =========================================================
    CONTACT ITEMS
-========================= */
+========================================================= */
 
 .contact-item {
     display: flex;
     align-items: center;
     gap: 15px;
+
     margin: 22px 0;
 
-    transition: .35s ease;
+    transition:
+        transform .35s ease;
 }
 
 .contact-item:hover {
@@ -873,14 +923,20 @@ section{
     align-items: center;
     justify-content: center;
 
-    border-radius: 10px;
+    flex-shrink: 0;
 
-    background: rgba(59, 130, 246, .1);
-    color: #60a5fa;
+    border-radius: 12px;
+
+    background: rgba(59, 130, 246, .10);
+    color: #2563eb;
 
     font-size: 20px;
 
-    transition: .35s ease;
+    transition:
+        transform .35s cubic-bezier(.2,.8,.2,1),
+        background .35s ease,
+        color .35s ease,
+        box-shadow .35s ease;
 }
 
 .contact-item:hover i {
@@ -889,65 +945,103 @@ section{
     background: #2563eb;
     color: #fff;
 
-    box-shadow: 0 8px 20px rgba(37, 99, 235, .25);
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, .28);
 }
 
 .contact-item span {
     color: #247ae3;
+    font-weight: 500;
 }
 
 
-/* =========================
+/* =========================================================
    CONTACT FORM
-========================= */
+========================================================= */
 
 .contact-form {
-    animation: contactFormShow .8s ease forwards;
+    width: 100%;
+
+    animation:
+        contactFormShow .8s cubic-bezier(.2,.8,.2,1) forwards;
 }
 
 
-/* =========================
-   INPUT GROUP
-========================= */
+/* =========================================================
+   FORM GROUP
+========================================================= */
 
 .form-group {
-    margin-bottom: 18px;
+    position: relative;
+
+    margin-bottom: 20px;
 
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(25px);
 
-    animation: formInputShow .7s ease forwards;
+    animation:
+        formInputShow .7s cubic-bezier(.2,.8,.2,1) forwards;
 }
 
 .form-group:nth-child(3) {
-    animation-delay: .1s;
+    animation-delay: .10s;
 }
 
 .form-group:nth-child(4) {
-    animation-delay: .2s;
+    animation-delay: .18s;
 }
 
 .form-group:nth-child(5) {
-    animation-delay: .3s;
+    animation-delay: .26s;
+}
+
+.form-group:nth-child(6) {
+    animation-delay: .34s;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #1f2937;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: color .3s ease;
+}
+
+.form-group:focus-within label {
+    color: #2563eb;
 }
 
 
-/* =========================
+/* =========================================================
    INPUT / TEXTAREA
-========================= */
+========================================================= */
 
 .form-control {
+    width: 100%;
+
+    padding: 14px 16px;
+
     background: #f9fafc !important;
 
-    border: 1px solid var(--border) !important;
+    border: 1px solid #dbe2ea !important;
+    border-radius: 11px;
 
     color: #111827 !important;
 
-    padding: 13px 15px;
+    outline: none;
 
-    border-radius: 10px;
+    box-shadow: 0 0 0 transparent;
 
-    transition: all .35s ease !important;
+    transition:
+        border-color .35s ease,
+        box-shadow .35s ease,
+        transform .35s cubic-bezier(.2,.8,.2,1),
+        background .35s ease;
 }
 
 
@@ -955,57 +1049,118 @@ section{
 
 .form-control:hover {
     border-color: #93c5fd !important;
+
+    background: #ffffff !important;
 }
 
 
 /* Focus */
 
 .form-control:focus {
-    box-shadow:
-        0 0 0 3px rgba(59, 130, 246, .1) !important;
-
     border-color: #3b82f6 !important;
 
+    background: #ffffff !important;
+
     transform: translateY(-3px);
+
+    box-shadow:
+        0 0 0 4px rgba(59, 130, 246, .10),
+        0 8px 25px rgba(37, 99, 235, .08) !important;
 }
 
 
 /* Placeholder */
 
 .form-control::placeholder {
-    color: #64748b;
+    color: #94a3b8;
 
-    transition: .3s ease;
+    transition:
+        transform .3s ease,
+        opacity .3s ease;
 }
 
 .form-control:focus::placeholder {
-    transform: translateX(6px);
-    opacity: .55;
+    transform: translateX(5px);
+
+    opacity: .45;
 }
 
 
-/* =========================
+/* Textarea */
+
+textarea.form-control {
+    min-height: 145px;
+
+    resize: vertical;
+}
+
+
+/* =========================================================
+   CHARACTER COUNTER
+========================================================= */
+
+.character-count {
+    display: block;
+
+    text-align: right;
+
+    margin-top: 6px;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    transition: color .3s ease;
+}
+
+.form-group:focus-within .character-count {
+    color: #2563eb;
+}
+
+
+/* =========================================================
    SEND BUTTON
-========================= */
+========================================================= */
 
 .send-btn {
     position: relative;
 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-width: 175px;
+
+    padding: 13px 25px;
+
     overflow: hidden;
 
     border: none;
+    border-radius: 11px;
 
-    border-radius: 10px;
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
 
-    padding: 12px 24px;
+    color: #fff;
+
+    font-weight: 600;
 
     opacity: 0;
 
     transform: translateY(20px);
 
-    animation: buttonShow .7s ease .45s forwards;
+    animation:
+        buttonShow .7s cubic-bezier(.2,.8,.2,1) .45s forwards;
 
-    transition: all .35s ease;
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        filter .35s ease;
 }
 
 
@@ -1014,34 +1169,52 @@ section{
 .send-btn:hover {
     transform: translateY(-4px);
 
+    filter: brightness(1.05);
+
     box-shadow:
-        0 12px 30px rgba(37, 99, 235, .25);
+        0 14px 32px rgba(37, 99, 235, .28);
 }
 
 
-/* Button Click */
+/* Button Active */
 
 .send-btn:active {
-    transform: scale(.96);
+    transform: translateY(-1px) scale(.97);
 }
 
 
-/* Button Icon */
+/* Disabled */
+
+.send-btn:disabled {
+    opacity: .7;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   BUTTON ICON
+========================================================= */
 
 .send-btn i {
     display: inline-block;
 
-    transition: .3s ease;
+    transition:
+        transform .35s cubic-bezier(.2,.8,.2,1);
 }
 
 .send-btn:hover i {
-    transform: translateX(5px);
+    transform: translateX(5px) rotate(-8deg);
 }
 
 
-/* =========================
-   BUTTON SHINE EFFECT
-========================= */
+/* =========================================================
+   BUTTON SHINE
+========================================================= */
 
 .send-btn::before {
     content: "";
@@ -1049,47 +1222,75 @@ section{
     position: absolute;
 
     top: 0;
-    left: -120%;
+    left: -130%;
 
-    width: 70%;
+    width: 65%;
     height: 100%;
 
-    background: rgba(255, 255, 255, .25);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.30),
+        transparent
+    );
 
     transform: skewX(-20deg);
 
-    transition: .6s ease;
+    transition: left .65s ease;
 }
 
 .send-btn:hover::before {
-    left: 130%;
+    left: 140%;
 }
 
 
-/* =========================
+/* =========================================================
+   LOADER
+========================================================= */
+
+.send-btn .spinner-border {
+    width: 16px;
+    height: 16px;
+
+    margin-left: 5px;
+}
+
+
+/* =========================================================
    RESULT MESSAGE
-========================= */
+========================================================= */
 
 .form-result {
     min-height: 25px;
 
-    margin-top: 15px;
+    margin-top: 16px;
+
+    font-size: 14px;
 
     font-weight: 600;
 
-    animation: resultShow .4s ease;
+    animation:
+        resultShow .4s ease forwards;
+}
+
+.form-result.success {
+    color: #15803d;
+}
+
+.form-result.error {
+    color: #dc2626;
 }
 
 
-/* =========================
+/* =========================================================
    ANIMATIONS
-========================= */
+========================================================= */
 
 @keyframes contactFormShow {
 
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
 
     to {
@@ -1104,7 +1305,7 @@ section{
 
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(25px);
     }
 
     to {
@@ -1119,7 +1320,7 @@ section{
 
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(25px);
     }
 
     to {
@@ -1140,6 +1341,83 @@ section{
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .contact-box {
+        padding: 28px 22px;
+
+        border-radius: 18px;
+    }
+
+    .contact-info h3 {
+        font-size: 26px;
+    }
+
+    .contact-item {
+        margin: 18px 0;
+    }
+
+    .send-btn {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .contact-box {
+        padding: 22px 17px;
+    }
+
+    .form-control {
+        padding: 13px 14px;
+    }
+
+    textarea.form-control {
+        min-height: 125px;
+    }
+
+    .contact-item i {
+        width: 44px;
+        height: 44px;
+
+        font-size: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact-box,
+    .contact-item,
+    .contact-item i,
+    .form-control,
+    .send-btn {
+        transition: none !important;
+    }
+
+    .contact-form,
+    .form-group,
+    .send-btn {
+        animation: none !important;
+
+        opacity: 1;
+        transform: none;
     }
 
 }
@@ -2380,46 +2658,119 @@ class="col-lg-7">
 
 <form id="contactForm" class="contact-form">
 
+    <!-- Web3Forms Access Key -->
     <input type="hidden"
            name="access_key"
            value="779e7981-c0f4-4daf-8f7f-83b3dc931f10">
 
+    <!-- Email Subject -->
     <input type="hidden"
            name="subject"
            value="New Message From Lavkush Portfolio">
 
+    <!-- From Name -->
+    <input type="hidden"
+           name="from_name"
+           value="Lavkush Portfolio">
+
+    <!-- Honeypot Spam Protection -->
+    <input type="checkbox"
+           name="botcheck"
+           class="hidden"
+           style="display:none;">
+
+    <!-- Name -->
     <div class="form-group">
+        <label for="name">Your Name</label>
+
         <input type="text"
+               id="name"
                name="name"
                class="form-control animated-input"
-               placeholder="Your Name"
+               placeholder="Enter your name"
+               minlength="3"
+               maxlength="50"
+               autocomplete="name"
                required>
     </div>
 
+    <!-- Email -->
     <div class="form-group">
+        <label for="email">Your Email</label>
+
         <input type="email"
+               id="email"
                name="email"
                class="form-control animated-input"
-               placeholder="Your Email"
+               placeholder="Enter your email"
+               autocomplete="email"
                required>
     </div>
 
+    <!-- Phone -->
     <div class="form-group">
-        <textarea name="message"
-                  class="form-control animated-input"
-                  rows="5"
-                  placeholder="Your Message"
-                  required></textarea>
+        <label for="phone">Phone Number</label>
+
+        <input type="tel"
+               id="phone"
+               name="phone"
+               class="form-control animated-input"
+               placeholder="Enter your phone number"
+               pattern="[0-9]{10}"
+               maxlength="10"
+               autocomplete="tel">
     </div>
 
+    <!-- Subject -->
+    <div class="form-group">
+        <label for="messageSubject">Subject</label>
+
+        <input type="text"
+               id="messageSubject"
+               name="message_subject"
+               class="form-control animated-input"
+               placeholder="Enter message subject"
+               maxlength="100"
+               required>
+    </div>
+
+    <!-- Message -->
+    <div class="form-group">
+        <label for="message">Your Message</label>
+
+        <textarea id="message"
+                  name="message"
+                  class="form-control animated-input"
+                  rows="6"
+                  placeholder="Write your message..."
+                  minlength="10"
+                  maxlength="1000"
+                  required></textarea>
+
+        <small class="character-count">
+            <span id="charCount">0</span>/1000
+        </small>
+    </div>
+
+    <!-- Submit Button -->
     <button type="submit"
             id="sendBtn"
             class="btn btn-primary send-btn">
+
         <i class="bi bi-send"></i>
-        Send Message
+        <span id="btnText">Send Message</span>
+
+        <span id="btnLoader"
+              class="spinner-border spinner-border-sm"
+              style="display:none;"
+              aria-hidden="true"></span>
     </button>
 
-    <p id="result" class="form-result"></p>
+    <!-- Result Message -->
+    <p id="result"
+       class="form-result"
+       role="alert"
+       aria-live="polite"></p>
 
 </form>
 </div>
@@ -2643,16 +2994,37 @@ class="col-lg-7">
    AOS INITIALIZATION
 ========================= */
 
-document.getElementById("contactForm").addEventListener("submit", async function(event) {
 
-    event.preventDefault();
+const contactForm = document.getElementById("contactForm");
+const sendBtn = document.getElementById("sendBtn");
+const btnText = document.getElementById("btnText");
+const btnLoader = document.getElementById("btnLoader");
+const result = document.getElementById("result");
 
-    const form = event.target;
-    const result = document.getElementById("result");
+const message = document.getElementById("message");
+const charCount = document.getElementById("charCount");
 
-    result.innerHTML = "Sending...";
 
-    const formData = new FormData(form);
+// Character Counter
+message.addEventListener("input", function () {
+    charCount.textContent = this.value.length;
+});
+
+
+// Form Submit
+contactForm.addEventListener("submit", async function (e) {
+
+    e.preventDefault();
+
+    // Button Loading
+    sendBtn.disabled = true;
+    btnText.textContent = "Sending...";
+    btnLoader.style.display = "inline-block";
+
+    result.textContent = "";
+    result.className = "form-result";
+
+    const formData = new FormData(contactForm);
 
     try {
 
@@ -2667,56 +3039,40 @@ document.getElementById("contactForm").addEventListener("submit", async function
         const data = await response.json();
 
         if (data.success) {
-            result.innerHTML = "✅ Message sent successfully!";
-            form.reset();
+
+            result.textContent =
+                "✓ Message sent successfully! Thank you for contacting me.";
+
+            result.classList.add("success");
+
+            contactForm.reset();
+
+            charCount.textContent = "0";
+
         } else {
-            result.innerHTML = "❌ Message send nahi hua.";
+
+            result.textContent =
+                "✕ Something went wrong. Please try again.";
+
+            result.classList.add("error");
         }
 
     } catch (error) {
 
-        result.innerHTML = "❌ Something went wrong.";
+        result.textContent =
+            "✕ Unable to send message. Please check your internet connection.";
 
+        result.classList.add("error");
+
+    } finally {
+
+        sendBtn.disabled = false;
+        btnText.textContent = "Send Message";
+        btnLoader.style.display = "none";
     }
-
 });
 
-function sendMessage(event){
 
-    event.preventDefault();
-
-    alert("Thank you! Your message has been submitted.");
-
-}
-
-document
-    .getElementById("copyUrlBtn")
-    .addEventListener("click", function () {
-
-        const profileUrl = window.location.href;
-
-        navigator.clipboard
-            .writeText(profileUrl)
-            .then(() => {
-
-                this.innerHTML =
-                    '<i class="bi bi-check-circle me-1"></i> Copied!';
-
-                setTimeout(() => {
-
-                    this.innerHTML =
-                        '<i class="bi bi-link-45deg me-1"></i> Copy Profile Link';
-
-                }, 2000);
-
-            })
-            .catch(() => {
-
-                alert("Unable to copy profile link.");
-
-            });
-
-    });
 
 AOS.init({
 
