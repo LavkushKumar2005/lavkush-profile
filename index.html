@@ -2418,7 +2418,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
     const form = this;
     const result = document.getElementById("result");
-    const button = form.querySelector("button[type='submit']");
+    const button = document.getElementById("sendBtn");
 
     result.innerHTML = "Sending...";
     button.disabled = true;
@@ -2437,24 +2437,33 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
         const data = await response.json();
 
+        console.log(data);
+
         if (data.success) {
 
             result.innerHTML =
-                "✅ Message sent successfully!";
+                '<span style="color:green;font-weight:600;">' +
+                '✅ Message sent successfully!' +
+                '</span>';
 
             form.reset();
 
         } else {
 
             result.innerHTML =
-                "❌ " + (data.message || "Message send nahi hua.");
-
+                '<span style="color:red;font-weight:600;">' +
+                '❌ ' + (data.message || "Message send nahi hua.") +
+                '</span>';
         }
 
     } catch (error) {
 
+        console.error(error);
+
         result.innerHTML =
-            "❌ Network error. Please try again.";
+            '<span style="color:red;font-weight:600;">' +
+            '❌ Network error. Please try again.' +
+            '</span>';
 
     } finally {
 
@@ -2463,7 +2472,6 @@ document.getElementById("contactForm").addEventListener("submit", async function
     }
 
 });
-
 function sendMessage(event){
 
     event.preventDefault();
