@@ -2085,7 +2085,7 @@ lavkushkumar14383@gmail.com
 <i class="bi bi-geo-alt"></i>
 
 <span>
-Lucknow, Uttar Pradesh
+Ketmai karikan Dhata,Fatehpur, Uttar Pradesh
 </span>
 
 </div>
@@ -2115,81 +2115,33 @@ class="col-lg-7">
            name="access_key"
            value="779e7981-c0f4-4daf-8f7f-83b3dc931f10">
 
-    <!-- Email Subject -->
-    <input
-        type="hidden"
-        name="_subject"
-        value="New Message From Lavkush Portfolio">
+    <input type="hidden"
+           name="subject"
+           value="New Message From Lavkush Portfolio">
 
-    <div class="row g-3">
+    <input type="text"
+           name="name"
+           class="form-control"
+           placeholder="Your Name"
+           required>
 
-        <!-- Name -->
-        <div class="col-md-6">
+    <input type="email"
+           name="email"
+           class="form-control"
+           placeholder="Your Email"
+           required>
 
-            <input
-                type="text"
-                name="name"
-                class="form-control"
-                placeholder="Your Name"
-                required>
+    <textarea name="message"
+              class="form-control"
+              rows="5"
+              placeholder="Your Message"
+              required></textarea>
 
-        </div>
+    <button type="submit" class="btn btn-primary">
+        Send Message
+    </button>
 
-
-        <!-- Email -->
-        <div class="col-md-6">
-
-            <input
-                type="email"
-                name="email"
-                class="form-control"
-                placeholder="Your Email"
-                required>
-
-        </div>
-
-
-        <!-- Subject -->
-        <div class="col-12">
-
-            <input
-                type="text"
-                name="subject"
-                class="form-control"
-                placeholder="Subject"
-                required>
-
-        </div>
-
-
-        <!-- Message -->
-        <div class="col-12">
-
-            <textarea
-                name="message"
-                class="form-control"
-                rows="6"
-                placeholder="Your Message"
-                required></textarea>
-
-        </div>
-
-
-        <!-- Button -->
-        <div class="col-12">
-
-            <button
-                type="submit"
-                class="btn-main btn-effect">
-
-                <i class="bi bi-send"></i>
-                Send Message
-
-            </button>
-
-        </div>
-
-    </div>
+    <p id="result"></p>
 
 </form>
 </div>
@@ -2407,21 +2359,20 @@ class="col-lg-7">
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 
+<script>
+
 /* =========================
    AOS INITIALIZATION
 ========================= */
-   
-<script>
-document.getElementById("contactForm").addEventListener("submit", async function(e) {
 
-    e.preventDefault();
+document.getElementById("contactForm").addEventListener("submit", async function(event) {
 
-    const form = this;
+    event.preventDefault();
+
+    const form = event.target;
     const result = document.getElementById("result");
-    const button = document.getElementById("sendBtn");
 
     result.innerHTML = "Sending...";
-    button.disabled = true;
 
     const formData = new FormData(form);
 
@@ -2437,48 +2388,21 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
         const data = await response.json();
 
-        console.log(data);
-
         if (data.success) {
-
-            result.innerHTML =
-                '<span style="color:green;font-weight:600;">' +
-                '✅ Message sent successfully!' +
-                '</span>';
-
+            result.innerHTML = "✅ Message sent successfully!";
             form.reset();
-
         } else {
-
-            result.innerHTML =
-                '<span style="color:red;font-weight:600;">' +
-                '❌ ' + (data.message || "Message send nahi hua.") +
-                '</span>';
+            result.innerHTML = "❌ Message send nahi hua.";
         }
 
     } catch (error) {
 
-        console.error(error);
-
-        result.innerHTML =
-            '<span style="color:red;font-weight:600;">' +
-            '❌ Network error. Please try again.' +
-            '</span>';
-
-    } finally {
-
-        button.disabled = false;
+        result.innerHTML = "❌ Something went wrong.";
 
     }
 
 });
-function sendMessage(event){
 
-    event.preventDefault();
-
-    alert("Thank you! Your message has been submitted.");
-
-}
 function sendMessage(event){
 
     event.preventDefault();
